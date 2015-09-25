@@ -6,6 +6,12 @@ use Guzzle\Http\Client as GuzzleClient;
 
 class Auth extends Slack
 {
+    /**
+     * Testing Slack token.
+     *
+     * @return bool
+     * @throws \Exception
+     */
     public function test()
     {
         $params = array('token' => $this->getToken());

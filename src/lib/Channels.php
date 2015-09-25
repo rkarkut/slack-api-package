@@ -6,6 +6,14 @@ use Guzzle\Http\Client as GuzzleClient;
 
 class Channels extends Slack
 {
+    /**
+     * Creating a new channel.
+     *
+     * * @param $name
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function create($name)
     {
         if (empty($this->token)) {
@@ -37,6 +45,14 @@ class Channels extends Slack
         return $result;
     }
 
+    /**
+     * Archiving a channel.
+     *
+     * * @param $channelId
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function archive($channelId)
     {
         if (empty($this->token)) {
@@ -68,6 +84,14 @@ class Channels extends Slack
         return $result;
     }
 
+    /**
+     * Getting list of available channels.
+     *
+     * * @param int $excludeArchived
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function getList($excludeArchived = 0)
     {
         if (empty($this->token)) {

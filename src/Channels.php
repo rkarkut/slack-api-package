@@ -13,6 +13,14 @@ class Channels
         $this->token = $token;
     }
 
+    /**
+     * Creating new channel.
+     *
+     * * @param $name
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function create($name)
     {
         $channels = new ChannelsLib();
@@ -21,6 +29,14 @@ class Channels
         return $channels->create($name);
     }
 
+    /**
+     * Archiving channel.
+     *
+     * * @param $channelId
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function archive($channelId)
     {
         $channels = new ChannelsLib();
@@ -29,6 +45,14 @@ class Channels
         return $channels->archive($channelId);
     }
 
+    /**
+     * Getting list of available channels.
+     *
+     * * @param int $excludeArchived
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function getList($excludeArchived = 0)
     {
         $channels = new ChannelsLib();

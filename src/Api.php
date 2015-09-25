@@ -4,6 +4,7 @@ namespace Rkarkut\Slack;
 
 use Rkarkut\Slack\lib\Api as ApiLib;
 
+
 class Api
 {
     private $token;
@@ -13,6 +14,12 @@ class Api
         $this->token = $token;
     }
 
+    /**
+     * Testing Slack API.
+     *
+     * @return bool
+     * @throws \Exception
+     */
     public function test()
     {
         $api = new ApiLib();

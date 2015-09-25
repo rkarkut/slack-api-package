@@ -6,6 +6,12 @@ use Guzzle\Http\Client as GuzzleClient;
 
 class Api extends Slack
 {
+    /**
+     * Testing Slack API.
+     *
+     * @return bool
+     * @throws \Exception
+     */
     public function test()
     {
         $client = new GuzzleClient($this->url);

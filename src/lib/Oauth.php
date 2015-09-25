@@ -6,6 +6,17 @@ use Guzzle\Http\Client as GuzzleClient;
 
 class Oauth extends Slack
 {
+    /**
+     * Getting access to an application.
+     *
+     * * @param $clientId
+     * @param $clientSecret
+     * @param $code
+     * @param $redirectUrl
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function access($clientId, $clientSecret, $code, $redirectUrl)
     {
         $params = array(

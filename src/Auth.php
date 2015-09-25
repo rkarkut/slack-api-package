@@ -13,6 +13,12 @@ class Auth
         $this->token = $token;
     }
 
+    /**
+     * Testing Slack authorization token.
+     *
+     * @return bool
+     * @throws \Exception
+     */
     public function test()
     {
         $auth = new AuthLib();

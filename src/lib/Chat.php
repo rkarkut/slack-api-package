@@ -6,6 +6,15 @@ use Guzzle\Http\Client as GuzzleClient;
 
 class Chat extends Slack
 {
+    /**
+     * Posting a message.
+     *
+     * * @param $text
+     * @param string $username
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function postMessage($text, $username = 'BOT')
     {
         $params = array(

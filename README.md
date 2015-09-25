@@ -12,7 +12,7 @@ You can install the package using the ```Composer``` package manager. You can in
 
 
 ```php
-composer require rkarkut/slack-package
+composer require rkarkut/slack-package:master-dev
 ```
 Then create an Application in your Slack account for the package to use. You will need the ```Client ID``` and ```Client Secret``` to prepare authorization script.
 

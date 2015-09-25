@@ -13,6 +13,15 @@ class Chat
         $this->token = $token;
     }
 
+    /**
+     * Posting message to channel.
+     *
+     * * @param $text
+     * @param null $username
+     *
+     * @return object
+     * @throws \Exception
+     */
     public function postMessage($text, $username = null)
     {
         $chat = new ChatLib();
