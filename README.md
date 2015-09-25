@@ -78,8 +78,8 @@ To authorize any user with the Application you can use the package like in the e
 $client = new \Rkarkut\Slack\Client();
 
 // put application client ID and secret
-$clientId = '11053018468.11070551088';
-$clientSecret = 'fc9ea6d136b1984b7f34d8de62d8a7ac';
+$clientId = 'your.client.id';
+$clientSecret = 'client.secret';
 
 // get authorization code from the Slack
 $code = $_GET['code'];
