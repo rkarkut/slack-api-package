@@ -14,7 +14,7 @@ You can install the package using the ```Composer``` package manager. You can in
 ```php
 composer require rkarkut/slack-package
 ```
-Then create an Application in your Slack account for the package to use. You will need the ```Client ID``` and ```Client Secret```.
+Then create an Application in your Slack account for the package to use. You will need the ```Client ID``` and ```Client Secret``` to prepare authorization script.
 
 ## Basic USage
 
@@ -29,7 +29,7 @@ if ($client->api()->test()) {
 }
 ```
 
-To test Your token You can call your client instance like below.
+To test Your token You can call your client instance like in the example below.
 
 ```php
 $client->setToken('your.token');
@@ -41,7 +41,7 @@ if ($client->auth()->test()) {
 
 ### Managing channels
 
-To manage channels You can call methods like examples below.
+To manage channels You can call methods like in the examples below.
 
 #### Creating a channel
 
@@ -67,6 +67,28 @@ To post a message to any channels You can call methods like in the examples belo
 
 ```php
 $client->chat()->postMessage('post.message', 'name.of.bot');
+```
+
+## Integrating the package to authorize Your application
+
+To authorize any user with the Application you can use the package like in the example below.
+
+```php
+// creating client instance
+$client = new \Rkarkut\Slack\Client();
+
+// put application client ID and secret
+$clientId = '11053018468.11070551088';
+$clientSecret = 'fc9ea6d136b1984b7f34d8de62d8a7ac';
+
+// get authorization code from the Slack
+$code = $_GET['code'];
+
+// optional parameter
+$redirectUrl = null;
+
+// authorize
+$result = $client->oauth($clientId, $clientSecret)->access($code, $redirectUrl);
 ```
 
 ## Conclusion
